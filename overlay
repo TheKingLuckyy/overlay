@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Gift Effects</title>
+<style>
+  :root{
+    --bg: rgba(10,10,12,.70);
+    --card: rgba(22,22,27,.92);
+    --ring: rgba(255,255,255,.12);
+    --text: #f3f4f6;
+    --muted:#a1a1aa;
+
+    --e:#ffffff;           /* E = white */
+    --d:#22c55e;           /* D = green */
+    --c:#fbbf24;           /* C = gold */
+    --b:#f59e0b;           /* B = orange/amber */
+    --s:#c084fc;           /* S = purple */
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:transparent}
+  body{
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+    color:var(--text);
+    display:flex; justify-content:center; align-items:flex-start;
+  }
+  .wrap{
+    margin-top:12px;
+    width:min(92vw,760px);
+    background:var(--bg);
+    border:1px solid var(--ring);
+    border-radius:18px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+    overflow:hidden;
+  }
+  .head{
+    display:flex; align-items:center; gap:10px;
+    padding:10px 14px 8px;
+    background:var(--card);
+    border-bottom:1px solid var(--ring);
+  }
+  .dot{width:10px;height:10px;border-radius:50%;background:var(--c);box-shadow:0 0 14px 2px rgba(251,191,36,.6)}
+  .title{font-weight:800; letter-spacing:.2px}
+  .subtitle{margin-left:auto; font-size:13px; color:var(--muted)}
+  .list{display:grid; gap:8px; padding:10px 14px 14px}
+  .row{
+    display:grid; grid-template-columns:auto 1fr auto; gap:10px; align-items:center;
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--ring);
+    border-radius:12px; padding:8px 10px;
+  }
+  .pill{
+    min-width:38px; height:22px; border-radius:999px;
+    display:inline-flex; align-items:center; justify-content:center;
+    font-weight:900; font-size:12px; letter-spacing:.6px;
+    border:1px solid var(--ring);
+  }
+  .pill.e{ color:var(--e); background:rgba(255,255,255,.10) }
+  .pill.d{ color:var(--d); background:rgba(34,197,94,.16) }
+  .pill.c{ color:var(--c); background:rgba(251,191,36,.16) }
+  .pill.b{ color:var(--b); background:rgba(245,158,11,.16) }
+  .pill.s{ color:var(--s); background:rgba(192,132,252,.18) }
+
+  .txt{font-size:14px; line-height:1.25}
+  .muted{color:var(--muted)}
+  .em{font-weight:700}
+
+  .coins{
+    font-size:13px; color:var(--muted);
+    background:rgba(255,255,255,.06);
+    border:1px solid var(--ring); border-radius:8px;
+    padding:4px 8px; display:inline-flex; gap:6px; align-items:center;
+  }
+  .coin{filter:drop-shadow(0 0 6px rgba(251,191,36,.45))}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <div class="dot"></div>
+      <div class="title">Gift Effects</div>
+      <div class="subtitle">1 gift → 1 spawn/wave</div>
+    </div>
+
+    <div class="list">
+      <!-- S -->
+      <div class="row">
+        <div class="pill s">S</div>
+        <div class="txt">Bosses drop on me: Wither / Warden / Ravager (<span class="muted">Regen I</span>). If I’m in water → Elder Guardian (<span class="muted">Regen I</span>), else Mutant Enderman. Frost Giant ×2 (<span class="muted">Regen I</span>).</div>
+        <div class="coins"><span class="coin">🪙</span>500+ Coins</div>
+      </div>
+
+      <!-- B -->
+      <div class="row">
+        <div class="pill b">B</div>
+        <div class="txt">Waves: Ancient Skeleton ×3, Dark Sorcerer ×3, Remnant ×3, Frost Giant ×1 (<span class="muted">Regen I</span>).</div>
+        <div class="coins"><span class="coin">🪙</span>250+ Coins</div>
+      </div>
+
+      <!-- C -->
+      <div class="row">
+        <div class="pill c">C</div>
+        <div class="txt">Hostiles in <span class="em">Diamond Prot III + Projectile Prot III</span> + Diamond Axe (one per gift).</div>
+        <div class="coins"><span class="coin">🪙</span>100+ Coins</div>
+      </div>
+
+      <!-- D -->
+      <div class="row">
+        <div class="pill d">D</div>
+        <div class="txt">Hostiles wearing <span class="em">Iron Armor</span> + <span class="em">Diamond Axe</span> (one per gift).</div>
+        <div class="coins"><span class="coin">🪙</span>50+ Coins</div>
+      </div>
+
+      <!-- E -->
+      <div class="row">
+        <div class="pill e">E</div>
+        <div class="txt">Vanilla hostiles (one per gift). Name shows above mob.</div>
+        <div class="coins"><span class="coin">🪙</span>1+ Coins</div>
+      </div>
+
+      <!-- Follow -->
+      <div class="row">
+        <div class="pill e">E</div>
+        <div class="txt"><span class="em">Follow</span> also triggers E Tier.</div>
+        <div class="coins">Follow</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
